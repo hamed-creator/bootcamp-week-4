@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: GildaDisplay;
+  src: url(GildaDisplay-Regular.ttf);
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 50px;
+  max-width: 100%;
+}
+
+.header div:hover {
+  color: #25a59e;
+}
+
+.header a {
+  all: unset;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.header button {
+  all: unset;
+}
+
+.header button:hover svg path {
+  fill: #25a59e;
+}
+
+.hero {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 90vw;
+  height: 90vh;
+  border: 5px dotted red;
+  position: relative;
+}
+/* circle */
+.hero span + img {
+  position: absolute; /* Position relative to .hero */
+  top: 50%; /* Adjust vertical position */
+  left: 50%; /* Adjust horizontal position */
+  transform: translate(-50%, -50%); /* Center the image */
+  z-index: 0; /* Ensures this image is below the banner */
+  width: 60%; /* Set width of the image */
+  height: auto;
+  border: 3px dotted blue;
+}
+/* people */
+.hero img + img {
+  position: absolute; /* Position relative to .hero */
+  top: 55%; /* Adjust vertical position */
+  left: 50%; /* Adjust horizontal position */
+  transform: translate(-50%, -50%); /* Center the image */
+  z-index: 2; /* Ensures this image is below the banner */
+  width: 60%; /* Set width of the image */
+  height: auto;
+  border: 5px solid magenta;
+}
+/* text */
+.hero span {
+  text-align: center;
+  position: absolute; /* Position relative to .hero */
+  top: 0%; /* Adjust vertical position */
+  left: 50%; /* Adjust horizontal position */
+  transform: translate(-50%, -50%);
+  margin-top: 3%;
+  font-size: clamp(40px, 8vw, 80px);
+  font-family: GildaDisplay;
+  height: 10%;
+  width: 40%;
+  text-wrap: wrap;
+  z-index: 1;
+  border: 4px solid orange;
+}
+
+.hero span strong {
+  color: #25a59e;
+}
+.banner {
+  position: relative;
+  border: 2px solid green;
+  height: 25%;
+  margin-top: auto;
+  background-color: ;
+}
